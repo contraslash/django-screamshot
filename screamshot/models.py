@@ -15,7 +15,7 @@ try:
 except ImportError:
     from datetime import datetime as timebase
 
-from timedelta.fields import TimedeltaField
+# from timedelta.fields import TimedeltaField
 
 from screamshot.utils import casperjs_capture
 
@@ -58,11 +58,11 @@ class WebPageScreenshot(models.Model):
     """
     title = models.CharField(_("Title"), max_length=500)
     comment = models.TextField(_("Comment"), blank=True)
-    validity = TimedeltaField(
-        _("Validity"),
-        blank=True,
-        null=True,
-        help_text="maximum validity period.")
+    # validity = TimedeltaField(
+    #     _("Validity"),
+    #     blank=True,
+    #     null=True,
+    #     help_text="maximum validity period.")
     screenshot = models.ImageField(
         _("screenshot"),
         upload_to='screenshots/',
